@@ -13,10 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://dana-engels-portfolio.dengels.chatgpt.site'),
+  metadataBase: new URL('https://danaengels.com'),
   title: 'Dana Engels | Product OS Portfolio',
   description:
     'The interactive portfolio of Dana Engels, a WGU Computer Science student building toward software and AI engineering.',
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'Dana Engels | Product OS Portfolio',
     description:
