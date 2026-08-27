@@ -3,14 +3,13 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
-type Mode = 'day' | 'night' | 'signal' | 'overdrive';
+type Mode = 'day' | 'night' | 'ridiculous';
 type ProjectKey = 'whatcom' | 'product-os';
 
 const modeNotes: Record<Mode, string> = {
   day: 'Balanced and bright. The recruiter-friendly default.',
   night: 'Focused contrast for a builder-at-work feel.',
-  signal: 'Stronger color and sharper emphasis on proof.',
-  overdrive: 'Maximum color, animated edges, cursor trails, and entirely reasonable excess.',
+  ridiculous: 'Maximum color, animated edges, cursor trails, and entirely reasonable excess.',
 };
 
 const projects = {
@@ -69,18 +68,18 @@ const professionalStack = [
   },
 ];
 
-function burst(x: number, y: number, overdrive: boolean) {
+function burst(x: number, y: number, ridiculous: boolean) {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  const colors = overdrive
+  const colors = ridiculous
     ? ['#00d5ff', '#ff4dff', '#00ff85', '#ffffff', '#a3ff12']
     : ['#2563eb', '#0d8f86', '#c43c8f'];
-  const count = overdrive ? 24 : 8;
+  const count = ridiculous ? 24 : 8;
 
   for (let index = 0; index < count; index += 1) {
     const spark = document.createElement('span');
     const angle = (Math.PI * 2 * index) / count;
-    const distance = (overdrive ? 64 : 28) + Math.random() * 30;
+    const distance = (ridiculous ? 64 : 28) + Math.random() * 30;
     spark.className = 'spark';
     spark.style.left = `${x}px`;
     spark.style.top = `${y}px`;
@@ -111,7 +110,7 @@ export default function Home() {
       document.documentElement.style.setProperty('--pointer-x', `${event.clientX}px`);
       document.documentElement.style.setProperty('--pointer-y', `${event.clientY}px`);
 
-      if (document.body.dataset.mode !== 'overdrive') return;
+      if (document.body.dataset.mode !== 'ridiculous') return;
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       if (performance.now() - lastTrail < 42) return;
 
@@ -149,17 +148,17 @@ export default function Home() {
   const chooseMode = (nextMode: Mode, x: number, y: number) => {
     setMode(nextMode);
     setToast(`${nextMode[0].toUpperCase()}${nextMode.slice(1)} mode enabled`);
-    burst(x, y, nextMode === 'overdrive');
+    burst(x, y, nextMode === 'ridiculous');
   };
 
   const chooseProject = (key: ProjectKey, x: number, y: number) => {
     setProjectKey(key);
     setToast(`${projects[key].title} module loaded`);
-    burst(x, y, mode === 'overdrive');
+    burst(x, y, mode === 'ridiculous');
   };
 
   const runReview = (x: number, y: number) => {
-    burst(x, y, mode === 'overdrive');
+    burst(x, y, mode === 'ridiculous');
     setLaunching(true);
     window.setTimeout(() => {
       setLaunching(false);
@@ -190,8 +189,7 @@ export default function Home() {
             >
               <option value="day">Day</option>
               <option value="night">Night</option>
-              <option value="signal">Signal</option>
-              <option value="overdrive">Overdrive</option>
+              <option value="ridiculous">Ridiculous</option>
             </select>
           </label>
           <div className="nav-links">
@@ -225,7 +223,7 @@ export default function Home() {
           <section className="mode-card panel magnetic">
             <h2>Interface mode</h2>
             <div className="mode-buttons" aria-label="Interface mode">
-              {(['day', 'night', 'signal', 'overdrive'] as Mode[]).map((item) => (
+              {(['day', 'night', 'ridiculous'] as Mode[]).map((item) => (
                 <button
                   className={mode === item ? 'active' : ''}
                   type="button"
@@ -240,8 +238,8 @@ export default function Home() {
             <p className="mode-note">{modeNotes[mode]}</p>
           </section>
 
-          <section className="signal-card panel magnetic">
-            <h2>Personal signal</h2>
+          <section className="identity-card panel magnetic">
+            <h2>Working style</h2>
             <p>Warm communicator, practical builder, curious learner, calm inside ambiguity.</p>
           </section>
         </aside>
@@ -437,7 +435,7 @@ export default function Home() {
             <a href="#experience" onClick={() => setPaletteOpen(false)}><span>See transferable experience</span><span>Experience</span></a>
             <a href="#learning" onClick={() => setPaletteOpen(false)}><span>Open learning pipeline</span><span>Learning</span></a>
             <a href="#contact" onClick={() => setPaletteOpen(false)}><span>Jump to contact</span><span>Connect</span></a>
-            <button type="button" onClick={() => { setMode('overdrive'); setPaletteOpen(false); setToast('Overdrive mode enabled'); }}><span>Make it ridiculous</span><span>Overdrive</span></button>
+            <button type="button" onClick={() => { setMode('ridiculous'); setPaletteOpen(false); setToast('Ridiculous mode enabled'); }}><span>Make it ridiculous</span><span>Ridiculous</span></button>
           </div>
         </div>
       </div>

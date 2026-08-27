@@ -4,7 +4,7 @@ Product OS is the interactive personal portfolio for Dana Engels.
 
 The site presents Dana's current chapter as a WGU Computer Science student,
 the professional experience he brings to a new technical path, and work he can
-support today. Its four interface modes - Day, Night, Signal, and Overdrive -
+support today. Its three interface modes - Day, Night, and Ridiculous -
 make the portfolio feel like a personal workspace without overstating his
 technical experience.
 
