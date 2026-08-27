@@ -1,27 +1,28 @@
-# Dana Engels Portfolio
+# Dana Engels Personal Site
 
-A focused software portfolio for Dana Engels, a WGU Computer Science student and career changer building practical software tools.
+Product OS is the interactive personal portfolio for Dana Engels.
 
-Live site: https://dana-engels-portfolio.dengels.chatgpt.site
+The site presents Dana's current chapter as a WGU Computer Science student,
+the professional experience he brings to a new technical path, and work he can
+support today. Its four interface modes - Day, Night, Signal, and Overdrive -
+make the portfolio feel like a personal workspace without overstating his
+technical experience.
 
-The portfolio presents Dana's current software direction, proof to date, practical background, and public work. It is intentionally simple: a clear first version that can grow as more projects, writeups, and shipped work become available.
+Current public work includes the live [Whatcom House Plans](https://whatcomhp.com/)
+business website and Product OS itself. Additional software projects will be
+added as they are completed through school and independent learning.
 
 ## Stack
 
 - Next.js
 - React
-- TypeScript
 - Vinext
 - OpenAI Sites
 
-## Local Development
+## Development
 
 ```bash
 npm install
 npm run dev
 npm run build
 ```
-
-## Notes
-
-The public repo includes the source files for the portfolio and a compressed profile image asset. Generated build output, local environment files, dependency folders, and deployment state are intentionally ignored.

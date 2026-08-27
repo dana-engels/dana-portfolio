@@ -13,9 +13,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Dana Engels | Software Portfolio',
+  metadataBase: new URL('https://dana-engels-portfolio.dengels.chatgpt.site'),
+  title: 'Dana Engels | Product OS Portfolio',
   description:
-    'Dana Engels is a WGU Computer Science student and career changer building practical software tools with Python, JavaScript, automation, and AI-assisted workflows.',
+    'The interactive portfolio of Dana Engels, a WGU Computer Science student building toward software and AI engineering.',
+  openGraph: {
+    title: 'Dana Engels | Product OS Portfolio',
+    description:
+      'An interactive portfolio for a WGU Computer Science student building toward software and AI engineering.',
+    images: ['/og.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Dana Engels | Product OS Portfolio',
+    description:
+      'An interactive portfolio for a WGU Computer Science student building toward software and AI engineering.',
+    images: ['/og.png'],
+  },
 };
 
 export default function RootLayout({
