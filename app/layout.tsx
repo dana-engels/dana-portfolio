@@ -20,18 +20,39 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+  },
   openGraph: {
+    type: 'website',
+    url: '/',
+    siteName: 'Dana Engels',
     title: 'Dana Engels | Product OS Portfolio',
     description:
       'An interactive portfolio for a WGU Computer Science student building toward software and AI engineering.',
-    images: ['/og.png'],
+    images: [
+      {
+        url: '/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Dana Engels, Computer Science Student',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Dana Engels | Product OS Portfolio',
     description:
       'An interactive portfolio for a WGU Computer Science student building toward software and AI engineering.',
-    images: ['/og.png'],
+    images: [
+      {
+        url: '/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Dana Engels, Computer Science Student',
+      },
+    ],
   },
 };
 
