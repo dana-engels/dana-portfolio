@@ -28,7 +28,7 @@ const projects = {
     label: 'Interactive portfolio / Current build',
     title: 'Dana Product OS',
     summary:
-      'This app-like personal workspace turns a conventional portfolio into an interactive review experience with four interface modes, a command menu, and responsive recruiter-friendly navigation.',
+      'This app-like personal workspace turns a conventional portfolio into an interactive review experience with three interface modes, a command menu, and responsive recruiter-friendly navigation.',
     value:
       'A transparent snapshot of how I am learning to shape software around a user. The interface is intentionally polished, while the claims inside it stay grounded in work I can support today.',
     stack: ['React', 'Next.js', 'Interaction design', 'Accessibility'],
